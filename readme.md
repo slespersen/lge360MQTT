@@ -47,6 +47,12 @@ A systemd service file is provided to enable the script to be run as a service.
 
 Remember to update the variables, according to your setup.
 
+```sh
+sudo cp lge360MQTT.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable lge360MQTT.service
+```
+
 ## Inspiration, Resources & Acknowledgements
 
 -   [Greenpower Denmark](https://greenpowerdenmark.dk/): [Branchestandard for fjernaflæste elmåleres eksterne port](https://greenpowerdenmark.dk/files/media/document/Branchestandard-for-fjernaflaeste-elmaaleres-eksterne-port.pdf)
