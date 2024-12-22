@@ -1,0 +1,11 @@
+[Unit]
+Description=Connecting Landis+Gyr E360 to Home Assistant using MQTT
+After=network.target dbus.service
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/lge360MQTT/main.py --serial_port "/dev/ttyUSB0" --baudrate 115200 --bytesize 8 --parity N --stopbits 1 --mqtt_broker "169.254.1.45" --mqtt_port 1883
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
